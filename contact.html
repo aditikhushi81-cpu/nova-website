@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact — NOVA®</title>
+    <meta name="description" content="Start a project with NOVA®. Tell us what you're building and we'll reply within 48 hours.">
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✦</text></svg>">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/contact.css">
+</head>
+
+<body>
+
+    <!-- PAGE LOADER -->
+    <div class="loader">
+        <div class="loader__inner">
+            <p class="loader__logo">NOVA<sup>®</sup></p>
+            <div class="loader__bar"><span class="loader__fill"></span></div>
+            <div class="loader__meta label">
+                <span>Contact / 004</span>
+                <span class="loader__status">Loading</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- NAVBAR -->
+    <header class="nav">
+        <a href="index.html" class="nav__logo">NOVA<sup>®</sup></a>
+        <p class="nav__tag">Digital experience studio</p>
+        <button class="nav__menu" aria-label="Open menu">
+            <span class="nav__menu-text">Menu</span>
+            <span class="nav__icon"></span>
+        </button>
+    </header>
+
+    <!-- FULL-SCREEN MENU -->
+    <div class="menu">
+        <ul class="menu__list">
+            <li>
+                <a href="index.html">
+                    <span class="label">01</span>
+                    <span class="menu__link">Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="work.html">
+                    <span class="label">02</span>
+                    <span class="menu__link">Work</span>
+                </a>
+            </li>
+            <li>
+                <a href="about.html">
+                    <span class="label">03</span>
+                    <span class="menu__link">About</span>
+                </a>
+            </li>
+            <li>
+                <a href="contact.html">
+                    <span class="label">04</span>
+                    <span class="menu__link">Contact</span>
+                </a>
+            </li>
+        </ul>
+
+        <div class="menu__foot label">
+            <span>India / Global</span>
+            <span>Independent digital studio</span>
+        </div>
+    </div>
+
+    <main>
+
+        <!-- HERO -->
+        <section class="c-hero">
+            <div class="c-hero__bg"></div>
+
+            <div class="c-hero__top">
+                <p class="label">004 / 004</p>
+                <a href="#inquiry" class="c-hero__link label">Start a conversation ↗</a>
+            </div>
+
+            <h1 class="c-hero__title">
+                <span class="line">Let's make</span>
+                <span class="line">something</span>
+                <span class="line">real.</span>
+            </h1>
+        </section>
+
+        <!-- START A PROJECT -->
+        <section class="c-start">
+            <div class="c-start__head">
+                <p class="label">01</p>
+                <p class="label">Direct contact</p>
+            </div>
+
+            <div class="c-start__body">
+                <h2 class="c-start__title">
+                    <span>Start</span>
+                    <span>a</span>
+                    <span class="dim">project.</span>
+                </h2>
+
+                <dl class="details">
+                    <div class="details__row">
+                        <dt class="label">Email</dt>
+                        <dd>hello@nova.studio</dd>
+                    </div>
+                    <div class="details__row">
+                        <dt class="label">Location</dt>
+                        <dd>Remote / Global</dd>
+                    </div>
+                    <div class="details__row">
+                        <dt class="label">Availability</dt>
+                        <dd>Select projects / 2026</dd>
+                    </div>
+                    <div class="details__row">
+                        <dt class="label">Response</dt>
+                        <dd>Within 48 hours</dd>
+                    </div>
+                </dl>
+            </div>
+        </section>
+
+        <!-- VISUAL STUDY -->
+        <section class="c-visual">
+            <div class="c-visual__img" role="img" aria-label="Dark architectural detail"></div>
+            <div class="c-visual__meta label">
+                <span>Visual study</span>
+                <span>001</span>
+            </div>
+        </section>
+
+        <!-- INQUIRY FORM -->
+        <section class="c-form" id="inquiry">
+            <div class="c-form__intro">
+                <p class="label">Tell us about it</p>
+                <h2 class="c-form__title">
+                    <span>What are</span>
+                    <span>you</span>
+                    <span class="dim">building?</span>
+                </h2>
+            </div>
+
+            <form class="form" id="contactForm">
+                <!-- Web3Forms: paste YOUR access key below (see instructions) -->
+                <input type="hidden" name="access_key" value="da62c1b3-149b-46db-be8d-8766b524cd12">
+                <input type="hidden" name="subject" value="New project enquiry from NOVA website">
+                <input type="hidden" name="from_name" value="NOVA Website">
+                <!-- spam trap: real people never see or fill this -->
+                <input type="checkbox" name="botcheck" style="display: none;" tabindex="-1" autocomplete="off">
+
+                <p class="form__tag label">Project inquiry</p>
+
+                <div class="field">
+                    <label class="label" for="name">01 / Your name</label>
+                    <input type="text" id="name" name="name" placeholder="Your name" required>
+                </div>
+
+                <div class="field">
+                    <label class="label" for="email">02 / Email</label>
+                    <input type="email" id="email" name="email" placeholder="you@email.com" required>
+                </div>
+
+                <div class="field">
+                    <label class="label" for="company">03 / Company</label>
+                    <input type="text" id="company" name="company" placeholder="Company / Brand">
+                </div>
+
+                <div class="field">
+                    <label class="label" for="direction">04 / Project type</label>
+                    <select id="direction" name="direction" required>
+                        <option value="" disabled selected>Select a direction</option>
+                        <option>Digital Experience</option>
+                        <option>Digital Identity</option>
+                        <option>Development</option>
+                        <option>Interactive / Motion</option>
+                        <option>Something else</option>
+                    </select>
+                </div>
+
+                <div class="field">
+                    <label class="label" for="message">05 / Tell us more</label>
+                    <textarea id="message" name="message" rows="4" placeholder="A few words about the project..."
+                        required></textarea>
+                </div>
+
+                <button type="submit" class="form__submit">
+                    <span class="form__submit-text">Send inquiry</span>
+                    <span>↗</span>
+                </button>
+
+                <p class="form__note label">By sending this inquiry, you agree that we may reply to you by email.</p>
+                <p class="form__status label" id="formStatus" role="status"></p>
+            </form>
+        </section>
+
+        <!-- NEXT MOVE -->
+        <section class="c-next">
+            <p class="label">005 / Let's begin</p>
+            <h2 class="c-next__title">
+                <span>Your next</span>
+                <span>digital</span>
+                <span class="dim">move.</span>
+            </h2>
+            <a href="#inquiry" class="c-next__row">
+                <span>Start the conversation</span>
+                <span>↗</span>
+            </a>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer__top">
+            <p class="footer__logo">NOVA<sup>®</sup></p>
+            <p class="footer__tag label">
+                Independent digital studio<br>
+                Design / Development / Motion
+            </p>
+        </div>
+
+        <div class="footer__cols">
+            <div class="footer__col">
+                <p class="label">Navigate</p>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="work.html">Work</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer__col">
+                <p class="label">Connect</p>
+                <ul>
+                    <li><a href="https://www.linkedin.com/in/adity-34b421382" target="_blank" rel="noopener">LinkedIn</a></li>
+                    <li><a href="https://github.com/aditikhushi81-cpu" target="_blank" rel="noopener">GitHub</a></li>
+                    <li><a href="#" target="_blank" rel="noopener">Instagram</a></li>
+                </ul>
+            </div>
+
+            <div class="footer__col">
+                <p class="label">Location</p>
+                <ul>
+                    <li>India / Global</li> 
+                    <li><a href="#inquiry">Start a project ↗</a></li>
+                </ul>
+            </div>
+
+            <a href="#" class="footer__top-link label">Back to top ↑</a>
+        </div>
+
+        <p class="footer__legal label">© 2026 NOVA® — Independent digital studio</p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="js/menu.js"></script>
+    <script src="js/contact.js"></script>
+</body>
+
+</html>
