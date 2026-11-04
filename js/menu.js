@@ -149,3 +149,101 @@ if (document.querySelector(".footer")) {
     arrow.replaceWith(link);
   });
 })();
+/* ===== SCROLL MOTION HELPERS (shared by every page) ===== */
+window.NOVA = (function () {
+  const calm = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  // wraps every word in a <span class="word">, keeping nested spans like .dim
+  function splitWords(el) {
+    [...el.childNodes].forEach((node) => {
+      if (node.nodeType === 3) {
+        const frag = document.createDocumentFragment();
+        node.textContent.split(/(\s+)/).forEach((part) => {
+          if (!part) return;
+          if (/^\s+$/.test(part)) {
+            frag.appendChild(document.createTextNode(part));
+          } else {
+            const w = document.createElement("span");
+            w.className = "word";
+            w.textContent = part;
+            frag.appendChild(w);
+          }
+        });
+        node.replaceWith(frag);
+      } else if (node.nodeType === 1) {
+        splitWords(node);
+      }
+    });
+    return el.querySelectorAll(".word");
+  }
+
+  // hero headings: lines slide apart and fade while you scroll away
+  function heroDrift(lineSelector, titleSelector, triggerSelector) {
+    if (calm) return;
+    const lines = gsap.utils.toArray(lineSelector);
+    if (!lines.length) return;
+
+    const trigger = () => ({
+      trigger: triggerSelector,
+      start: "top top",
+      end: "bottom top",
+      scrub: true,
+      invalidateOnRefresh: true
+    });
+
+    gsap.to(lines, {
+      x: (i) => (i % 2 ? 1 : -1) * window.innerWidth * 0.1,
+      ease: "none",
+      scrollTrigger: trigger()
+    });
+
+    gsap.to(titleSelector, {
+      opacity: 0.15,
+      ease: "none",
+      scrollTrigger: trigger()
+    });
+  }
+
+  // each line slides in and fades up as you scroll (same as "Your next digital move")
+  function scrubLines(selector) {
+    if (calm) return;
+    gsap.utils.toArray(selector).forEach((line) => {
+      gsap.from(line, {
+        opacity: 0.1,
+        x: -60,
+        scrollTrigger: {
+          trigger: line,
+          start: "top 90%",
+          end: "top 60%",
+          scrub: true
+        }
+      });
+    });
+  }
+
+  // a sentence lights up word by word as you scroll
+  function scrubWords(selector) {
+    if (calm) return;
+    const el = document.querySelector(selector);
+    if (!el) return;
+    const words = splitWords(el);
+
+    gsap.fromTo(words,
+      { opacity: 0.12, x: -24 },
+      {
+        opacity: 1,
+        x: 0,
+        ease: "none",
+        stagger: 0.1,
+        scrollTrigger: {
+          trigger: el,
+          start: "top 85%",
+          end: "bottom 55%",
+          scrub: true
+        }
+      }
+    );
+  }
+
+  return { heroDrift, scrubLines, scrubWords };
+})();

@@ -73,7 +73,7 @@ gsap.utils.toArray(".show").forEach((show, i) => {
 });
 
 /* ===== WHAT WE BUILD ===== */
-gsap.from(".build > .label, .build__title span", {
+gsap.from(".build > .label", {
   y: 50,
   opacity: 0,
   duration: 1,
@@ -127,3 +127,6 @@ gsap.from([".w-close__label", ".w-close__link"], {
   ease: "power3.out",
   scrollTrigger: { trigger: ".w-close", start: "top 60%" }
 });
+/* ===== SCROLL MOTION ===== */
+NOVA.heroDrift(".work-hero__title .line", ".work-hero__title", ".work-hero");
+NOVA.scrubLines(".build__title span");

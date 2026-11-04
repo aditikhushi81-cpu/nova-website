@@ -143,13 +143,7 @@ gsap.from(".studio__head > *", {
   scrollTrigger: { trigger: ".studio", start: "top 80%" }
 });
 
-gsap.from(".studio__statement", {
-  y: 50,
-  opacity: 0,
-  duration: 1.2,
-  ease: "power3.out",
-  scrollTrigger: { trigger: ".studio", start: "top 70%" }
-});
+
 
 gsap.from(".studio__body", {
   y: 30,
@@ -173,3 +167,6 @@ gsap.fromTo(".visual__img",
     }
   }
 );
+/* ===== SCROLL MOTION ===== */
+NOVA.heroDrift(".hero__title .line", ".hero__title", ".hero");
+NOVA.scrubWords(".studio__statement");

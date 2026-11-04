@@ -1054,3 +1054,7 @@ a.service__arrow::after {
   color: var(--bg);
   transform: translateY(3px);
 }
+/* ===== SPLIT WORDS (scroll-lit sentences) ===== */
+.word {
+  display: inline-block;
+}

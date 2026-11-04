@@ -216,3 +216,7 @@ gsap.from([".distinct__label", ".distinct__link"], {
   ease: "power3.out",
   scrollTrigger: { trigger: ".distinct", start: "top 60%" }
 });
+/* ===== SCROLL MOTION ===== */
+NOVA.heroDrift(".about-hero__title .line", ".about-hero__title", ".about-hero");
+/* ===== SCROLL MOTION ===== */
+NOVA.heroDrift(".c-hero__title .line", ".c-hero__title", ".c-hero");
